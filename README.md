@@ -4,8 +4,6 @@ This challenge allows you to practice the concepts and techniques learned over t
 
 - **DISCLAIMER** Authentication is a subject that many people spend a large amount time throughout their careers obtaining knowledge over. This is not something we expect you to have a mastery over, rather, we're preparing you to be able have an intelligent conversation about the subject.
 
-WILL START LATER TODAY. THANKS ORLANDO!
-
 ## Instructions
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
@@ -31,28 +29,42 @@ Implement an User Authentication System in order to access the jokes from the Jo
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 1. What is the purpose of using _sessions_?
-1. What does bcrypt do to help us store passwords in a secure manner.
-1. What does bcrypt do to slow down attackers?
-1. What are the three parts of the JSON Web Token?
+
+_sessions_ are used by developers to store informations about a user. They are used to improve the overall User Experience. For example, when someone signup or login, we generate a token from the backend that identify her so when she comes back afterwrads she is already connected. We can aslo use sessions to remember items added to a cart or messages not sent yet.
+
+2. What does bcrypt do to help us store passwords in a secure manner?
+
+bcrypt is a library that encrypt passwords before they are ever send to the backend so they can be stored as a hash and not plain text like Facebook did for so long 👀
+
+
+3. What does bcrypt do to slow down attackers?
+
+Bcrypt uses encryption tools like MD5, these tools are open source and anyone can access them. A hash needs to be unique but also give the same output everytime for the same input so it can be reversed when the user types is plain text passsword. If hackers ever got access to a DB they would be able to brute-force their way to re-engineer a simple password.
+
+Bcrypt salt passwords with a secret key that is attached to the password before it's hashed. Therefore rendreing the brute force way more difficult without the key.
+
+4. What are the three parts of the JSON Web Token?
+
+Header / Payload & Signature
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on this Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X] Add PM as collaborator on Github.
+- [X] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [X] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [X] Implement the project on this Branch, committing changes regularly.
+- [X] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project:
 
-- [ ] `cd` into the root of the project and run `yarn` to install dependencies.
-- [ ] Once you have your `node_modules` go ahead and run `yarn server` or `npm run server` to start your node server.
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
-- [ ] Add your Project Manager as a Reviewer on the Pull-request
-- [ ] PM then will count the HW as done by  merging the branch back into master.
+- [X] `cd` into the root of the project and run `yarn` to install dependencies.
+- [X] Once you have your `node_modules` go ahead and run `yarn server` or `npm run server` to start your node server.
+- [X] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [X] Add your Project Manager as a Reviewer on the Pull-request
+- [X] PM then will count the HW as done by  merging the branch back into master.
 
 Helpful Tip on Testing this Project:
 
