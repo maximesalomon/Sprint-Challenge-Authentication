@@ -68,11 +68,11 @@ Follow these steps for completing your project:
 
 Helpful Tip on Testing this Project:
 
-- [ ] **TEST** this project using **`POSTMAN`**.
+- [X] **TEST** this project using **`POSTMAN`**.
 
 ## Minimum Viable Product
 
-- [ ] Implement the `register` function inside `/config/routes.js`.
+- [X] Implement the `register` function inside `/config/routes.js`.
 - [ ] Implement the `login` function inside `/config/routes.js`.
 - [ ] Use JSON Web Tokens for authentication.
 
