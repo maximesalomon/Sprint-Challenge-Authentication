@@ -36,7 +36,17 @@ function register(req, res) {
 }
 
 function login(req, res) {
-  // implement user login
+  const creds = req.body;
+  db('users').where('username', creds.username).first().then(user => {
+    if (user && bcrypt.compareSync(creds.password, user.password)) {
+      const token = generateToken(user);
+      res.json({ message: `Welcome ${user.username}`, token });
+    } else {
+      res.status(401).send("Shove off, faker!")
+    }
+  }).catch(err => {
+    res.status(500).send(err)
+  })
 }
 
 function getJokes(req, res) {
